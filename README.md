@@ -4,9 +4,10 @@ PDE is Professional Development Environment. Contains programming configurations
 ## VS Code
 - [x] Settings File
 - [x] Keybinding File
-- [ ] Snippets Folder
-- [ ] VSCode Extensions & Extensions Configurations
-- [ ] User Guide
+- [x] Snippets Folder
+- [x] VSCode Extensions & Extensions Configurations
+- [x] 配置文件历史版本
+- [ ] VS Code 使用指南
 
 ## TODO
 - [ ] neovim
