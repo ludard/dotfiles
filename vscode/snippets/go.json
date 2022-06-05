@@ -1,0 +1,64 @@
+{
+	// Place your snippets for go here. Each snippet is defined under a snippet name and has a prefix, body and
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"vari": {
+		"prefix": "vari",
+		"body": [
+			"${1:i} := ${2:0}$3"
+		],
+		"description": "i := 0 函数内部int变量声明"
+	},
+	"vars": {
+		"prefix": "vars",
+		"body": [
+			"${1:str} := \"$2\"$3"
+		],
+		"description": "define str := \"\" 函数内部string变量声明"
+	},
+	"varserr": {
+		"prefix": "varserr",
+		"body": [
+			"${1:str}, ${2:err} := $3"
+		],
+		"description": "str, err := value 短变量和错误变量一起声明赋值"
+	},
+	"vararr": {
+		"prefix": "vararr",
+		"body": [
+			"${1:arrary} = []${2:string}{$3}"
+		],
+		"description": "var arrary = []string{} 数组声明赋值"
+	},
+	"<-chan": {
+		"prefix": "chr",
+		"body": [
+			"$2 <- ${1:ch}$3"
+		],
+		"description": "<-chan read"
+	},
+	"chan<-": {
+		"prefix": "chw",
+		"body": [
+			"${1:ch} <- "
+		],
+		"description": "chan <- write"
+	},
+	"fileopen": {
+		"prefix": "fileopen",
+		"body": [
+			"${1:f}, ${2:err} := os.Open(\"${3:filename}\")\nif ${2:err} != nil {\n\tpanic(${2:err})\n}\ndefer ${1:f}.Close()"
+		],
+		"description": "fileopen"
+	}
+}
