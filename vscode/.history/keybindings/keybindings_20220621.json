@@ -38,8 +38,7 @@
         "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
     },
     {
-        //显示问题面板
-        "key": "ctrl+shift+m",
+        "key": "ctrl+alt+m",
         "command": "workbench.action.search.toggleQueryDetails",
         "when": "searchViewletVisible"
     },
@@ -93,46 +92,5 @@
         "key": "ctrl+shift+l",
         "command": "editor.action.insertCursorAtEndOfEachLineSelected",
         "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+alt+i",
-        "command": "editor.action.inspectTMScopes"
-    },
-    {
-        //自定义批处理，关闭所有tab并折叠目录。Ctrl + Alt + \
-        "key": "ctrl+alt+oem_5",
-        "command": "macros.closeAllTabs"
-    },
-    {
-        //选择括号所有内容(包括括号) Ctrl + Shift + '(单引号)
-        "key": "ctrl+shift+oem_7",
-        "command": "editor.action.selectToBracket"
-    },
-    {
-        //新加一个空字符串。 Ctrl + k + a(append)
-        "key": "ctrl+k ctrl+a",
-        "command": "editor.action.insertSnippet",
-        "when": "editorTextFocus",
-        "args": {
-            "langId": "go",
-            "name": "addStrItem"
-        }
-    },
-    {
-        //将终端显示在编辑区
-        "key": "ctrl+alt+t",
-        "command": "workbench.action.terminal.moveToEditor"
-    },
-    {
-        //符号对齐。 Ctrl + Alt + =
-        "key": "ctrl+alt+oem_plus",
-        "command": "wwm.aligncode",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        //自动实现 Golang 接口(e表示extend) 编辑器任意位置都可使用
-        //输入格式：f *File io.Closer(前2个是接收者，第3个是接口名称)
-        "key": "ctrl+k ctrl+e",
-        "command": "go.impl.cursor"
     }
 ]

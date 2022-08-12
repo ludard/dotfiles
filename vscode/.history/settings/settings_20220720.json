@@ -2,15 +2,13 @@
     /**
     VS Code Version: 1.69.2
     file path: C:\Users\Ludard\AppData\Roaming\Code\User\settings.json
-    modify date: 2022-08-12
+    modify date: 2022-07-20
     */
     //字体默认配置: Consolas, 'Courier New', monospace
     //使用Git bash字体: Lucida Sans Typewriter
-    //编程字体: Droid Sans Mono Slashed、JetBrains Mono、Cascadia Code Light、Lucida Console、Source Code Pro、Monaco、DejaVu Sans Mono
+    //编程字体: Droid Sans Mono Slashed、JetBrains Mono、Cascadia Code Light、Lucida Console、Souce Code Pro、Monaco、DejaVu Sans Mono
     //常用字体: "JetBrains Mono Light,Droid Sans Mono Slashed,Comic Mono,Lucida Console,Consolas,Source Code Pro",
     //设置字体 英文:JetBrains Mono Light，中文:微软雅黑
-    //Dark主题使用Light清晰一些，Light正常清楚一些
-    //"JetBrains Mono Light,'微软雅黑',Consolas"
     "editor.fontFamily": "JetBrains Mono Light,'微软雅黑',Consolas",
     // "terminal.integrated.fontFamily": "'Cascadia Code'"
     //启用字体连字，如 !=、===是否连为一体。支持此特性字体:JetBrains Mono、Fira Code
@@ -25,10 +23,10 @@
     //字符间距，一般为0.3-0.6
     "editor.letterSpacing": 0.3,
     //光标样式 line 竖线条，underline 下划线
-    "editor.cursorStyle": "line",
+    "editor.cursorStyle": "underline",
     // 当 `editor.cursorStyle` 设置为 `line` 时，控制光标的宽度
     "editor.cursorWidth": 2,
-    //光标的动画样式。blink 最常用，expand 最有个性,solid 静止不动，smooth 最平滑淡入淡出
+    //光标的动画样式。expand 最有个性,solid 静止不动，smooth最普通。
     "editor.cursorBlinking": "blink",
     //启用平滑插入动画
     "editor.cursorSmoothCaretAnimation": true,
@@ -64,80 +62,50 @@
     ],
     // 控制键入时是否应自动显示建议
     "editor.quickSuggestions": {
-        //true:弹窗提示 inline:显示为虚拟文本 false:不显示
-        "strings": "inline",
-        "comments": "inline",
         "other": true,
+        "comments": false,
+        "strings": false
     },
     //建议(智能提示)显示延迟时间(毫秒)，太快容易误触发代码段
     "editor.quickSuggestionsDelay": 5,
-    //在智能提示没显示时知道代码段缩写直接按tab键展开
-    //如果禁用下面2项设置无法使用
-    "editor.tabCompletion": "on",
-    //建议显示为虚拟文本，类似Copilot，如果建议符合预期按tab键确定
-    //https://github.com/microsoft/vscode/issues/126375
-    "editor.suggest.preview": true,
-    "editor.inlineSuggest.enabled": true,
-    "editor.parameterHints.enabled": true,
-    //确定智能补全提示后是否覆盖当前单词  insert插入不覆盖  replace覆盖单词
-    "editor.suggest.insertMode": "replace",
-    //代码段的名称是随智能提示一起显示，还是只显示在详细信息面板中。 true:一起显示
-    //详细信息面板有可能是隐藏的，需要用鼠标点击一下代码段的名称显示出来
-    //详细信息面板的位置默认在右侧，可以缩小编辑器窗口面板就随着自动固定到下面了
-    "editor.suggest.showInlineDetails": true,
-    //在活动代码段内是否启用提示建议
-    "editor.suggest.snippetsPreventQuickSuggestions": false,
-    //智能提示选择项 first:固定顺序始终选中第一项
-    "editor.suggestSelection": "recentlyUsedByPrefix",
-    //在其它建议上面显示代码段 top:在其它代码上面显示代码段
+    //智能提示选择项
+    "editor.suggestSelection": "first",
+    //在其它建议上面显示代码段
     "editor.snippetSuggestions": "top",
-    "editor.suggest.showInterfaces": true,
+    //在活动代码段内时是否显示智能提示
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    //在智能提示没显示时知道代码段缩写直接按tab键展开
+    "editor.tabCompletion": "on",
     //滚动时使用动画
     "editor.smoothScrolling": true,
     //自动输入结束括号
     "editor.autoClosingBrackets": "always",
     //删除括号时自动删除结束括号
     "editor.autoClosingDelete": "always",
-    //括号突出显示颜色（自动分配不同颜色）
-    "editor.bracketPairColorization.enabled": false,
     //每个括号有独立的颜色池
     "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+    //括号突出显示颜色（自动分配不同颜色）
+    "editor.bracketPairColorization.enabled": true,
     //突出显示活动括号
     "editor.guides.highlightActiveBracketPair": true,
     //不显示缩进参考线
     "editor.guides.indentation": false,
-    //是否显示括号参考线 "active" 仅活动代码块显示，true 显示，false 不显示
-    "editor.guides.bracketPairs": false,
-    //禁用后，按住Ctrl+滑轮 不会缩放字体
-    "editor.mouseWheelZoom": false,
-    //多光标快捷键:ctrl(默认Alt)
-    "editor.multiCursorModifier": "ctrlCmd",
-    //启用列选择。启用后向下选择自动列模式，按 Alt再选择为普通模式。如果禁用，使用 Alt+Shift 进行列选择
-    "editor.columnSelection": false,
-    //双击选中文本的分隔符，加上中文分隔符（、，。“”？！） 去除 -
-    //默认："`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?"
-    "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.（、，。“”？！）<>/?",
+    //仅为活动括号显示参考线
+    "editor.guides.bracketPairs": "active",
     //重命名之前预览变更
     "editor.rename.enablePreview": true,
-    //鼠标悬停提示上时全部内容一直可见(不用滚动内容)
-    "editor.hover.sticky": true,
     //粘贴内容时自动调整缩进
     "editor.autoIndent": "advanced",
     //粘贴内容时自动格式化
     "editor.formatOnPaste": true,
     //代码编辑保存时自动格式化
     "editor.formatOnSave": true,
-    //保存时自动修复
-    "editor.codeActionsOnSave": {
-        "source.fixAll": true
-    },
-    //高亮显示非ASCII字符
-    "editor.unicodeHighlight.nonBasicASCII": false,
-    "editor.unicodeHighlight.allowedLocales": {
-        "zh-hans": true
-    },
-    //让函数(名)和后面的大括号之间加个空格
-    "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+    //禁用后，按住Ctrl+滑轮 不会缩放字体
+    "editor.mouseWheelZoom": false,
+    //启用列选择。启用后向下选择自动列模式，按 Alt再选择为普通模式。如果禁用，使用 Alt+Shift 进行列选择
+    "editor.columnSelection": false,
+    //多光标快捷键:ctrl(默认Alt)
+    "editor.multiCursorModifier": "ctrlCmd",
     //启用后，将在保存文件时剪裁尾随空格
     "files.trimTrailingWhitespace": true,
     //打开文件自动解析文件编码
@@ -148,16 +116,13 @@
     "files.simpleDialog.enable": true,
     //比较差异时不忽略空格
     "diffEditor.ignoreTrimWhitespace": false,
-    //主题设置
-    "workbench.colorTheme": "freeCodeCamp Dark Theme",
-    //常用暗色主题：
-    //一等: Jetbrains Fleet、GitHub Blue、Starfall Palenight、Default Dark+
-    //二等: freeCodeCamp Dark Theme、Mariana、GitHub Dark Default、Tokyo Night Storm、
-    // Cobalt2、Atom One Dark、Oceanic Next (dimmed bg)、
-    // Monokai Pro (Filter Octagon)、Penumbra Dark Contrast+
-    // Slack Theme Dark Mode、Slack Theme Aubergine Dark、
-    //亮色主题：Community Material Theme Lighter High Contrast（Material Theme主题包）
-    // Slack Theme Hoth、Bluloco Light、Atom One Light、Soda、
+    //让函数(名)和后面的大括号之间加个空格
+    "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+    //主题颜色
+    "workbench.colorTheme": "GitHub Blue",
+    //常用暗色主题：Jetbrains Fleet、GitHub Dark Default、Tokyo Night Storm、GitHub Blue、Cobalt2
+    // Starfall Palenight、Oceanic Next (dimmed bg)、Monokai Pro (Filter Octagon)
+    //亮色主题：Bluloco Light、Soda
     //主题在线预览：https://vscodethemes.com
     //文件图标
     "workbench.iconTheme": "material-icon-theme",
@@ -170,37 +135,18 @@
     "editor.semanticTokenColorCustomizations": {
         "enabled": true, // enable for all themes
         "[Default Dark+]": {
-            "enabled": false // enable for a particular theme
+            "enabled": true // enable for a particular theme
         },
         "[Jetbrains Fleet]": {
             "enabled": true //启用后可以高亮Go包名
-        },
-        "[freeCodeCamp Dark Theme]": {
-            // 正常情况关键字正常，但是类型没有颜色
-            // 开启semanticHighlighting.enabled 后，类型颜色显示正常，但是关键字不正常了
-            // 再关闭"ui.semanticTokens": false就一切正常.可以开启并重写关键字颜色
-            "enabled": true,
-            "rules": {
-                "keyword": "#DBB8FF",
-                "type": "#F1BE32"
-            }
-        },
-        "[Atom One Dark]": {
-            "enabled": false
         }
     },
-    //自定义主题组件颜色
+    //自定义括号颜色
     //https://code.visualstudio.com/api/references/theme-color
     "workbench.colorCustomizations": {
         "[Jetbrains Fleet]": {
             "editorLineNumber.activeForeground": "#abb2c0",
-            "editorCursor.foreground": "#EFB080"
-        },
-        "[GitHub Blue]": {
-            "tab.activeBorderTop": "#79C0FF"
-        },
-        "[freeCodeCamp Dark Theme]": {
-            "tab.activeBorder": "#DFDFE2"
+            "editorCursor.foreground": "#5FB4B4"
         }
     },
     //启用本地文件历史记录
@@ -217,14 +163,25 @@
     "workbench.startupEditor": "welcomePageInEmptyWorkbench",
     //启用平滑滚动动画
     "workbench.list.smoothScrolling": true,
-    //主边栏和活动栏位置：right 右边(不影响左边代码)，left 如果需要终端就左边
+    //关闭 固定打开的编缉器(没什么用)
+    "explorer.openEditors.visible": 0,
+    //保存时自动修复
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true
+    },
+    //高亮显示非ASCII字符
+    "editor.unicodeHighlight.nonBasicASCII": false,
+    "editor.unicodeHighlight.allowedLocales": {
+        "zh-hans": true
+    },
+    //主边栏和活动栏位置：右边(不影响左边代码)
     "workbench.sideBar.location": "right",
     //窗口顶部中间位置显示设置 true：显示命令窗口隐藏菜单 false：显示菜单隐藏命令窗口
     "window.commandCenter": true,
-    //关闭 固定打开的编缉器(没什么用)
-    "explorer.openEditors.visible": 0,
     //调试工具栏位置。floating：编辑器窗口上方 floating：运行和调试窗口上方
     "debug.toolBarLocation": "floating",
+    //Live Server预览端口，实时预览网页内容
+    "liveServer.settings.port": 5051,
     //终端默认命令工具，可以按F1输入：terminal select选择
     "terminal.integrated.defaultProfile.windows": "Git Bash",
     //打开设置时以界面方式展示(ui 或 json)
@@ -237,15 +194,10 @@
     "extensions.autoUpdate": true,
     //软件更新：使用手动更新
     "update.mode": "manual",
-    //Live Server预览端口，实时预览网页内容
-    "liveServer.settings.port": 5051,
     //Go LSP Server 配置
     //更多配置：https://github.com/golang/vscode-go/blob/master/docs/settings.md
     "gopls": {
-        // Jetbrains Fleet 主题设为 true, Token如 package、import、func等关键字高亮
-        // 以下主题需要设为false，否则关键字类型没有高亮或高亮不正确
-        // freeCodeCamp Dark Theme、Soda、
-        // Slack Theme系列(Slack Theme Dark Mode为true)
+        // Jetbrains Fleet 主题设置Go语言Token如 package、import、func等关键字高亮
         "ui.semanticTokens": true,
         // import 导入的包名不显示下划线(默认Both有下划线)
         "ui.navigation.importShortcut": "Definition",
@@ -265,35 +217,16 @@
             "workbench.action.terminal.killAll"
         ],
     },
-    // alignment.indentBase : "firstline" | "activeline" | "dontchange",->
-    "alignment.indentBase": "activeline",
+    // alignment.operatorPadding : "left" | "right"
     "alignment.operatorPadding": "left",
-    //配置cSpell只检测当前打开的工作区文件，不检测其它文件
+    // alignment.indentBase : "firstline" | "activeline" | "dontchange",
+    "alignment.indentBase": "firstline",
+    //配置cSpell只检测工作区文件，不检测其它如VSCode配置
     "cSpell.spellCheckOnlyWorkspaceFiles": true,
-    "cSpell.showAutocompleteSuggestions": true,
     "cSpell.userWords": [
-        "activeline",
-        "Cascadia",
-        "Consolas",
-        "dontchange",
-        "Fira",
-        "firstline",
-        "Gatito",
         "gopls",
-        "Hoth",
         "inancgumus",
-        "Jetbrains",
-        "Lucida",
         "Ludard",
-        "moby",
-        "Monokai"
-    ],
-    "cSpell.ignoreWords": [
-        "minecraft",
-        "tetris",
-        "stringintconv",
-        "Starfall",
-        "Palenight",
-        "Bluloco"
+        "stringintconv"
     ]
 }

@@ -1,0 +1,210 @@
+{
+    /**
+    VS Code Version: 1.67.2
+    file path: C:\Users\Ludard\AppData\Roaming\Code\User\settings.json
+    modify date: 2022-06-24
+    */
+    //字体默认配置: Consolas, 'Courier New', monospace
+    //使用Git bash字体: Lucida Sans Typewriter
+    //编程字体: Droid Sans Mono Slashed、JetBrains Mono、Cascadia Code Light、Lucida Console、Souce Code Pro、Monaco、DejaVu Sans Mono
+    //常用字体: "JetBrains Mono,Droid Sans Mono Slashed,Comic Mono,Lucida Console,Consolas,Source Code Pro",
+    //设置字体 英文:JetBrains Mono，中文:微软雅黑
+    "editor.fontFamily": "JetBrains Mono Light,'微软雅黑',Consolas",
+    // "terminal.integrated.fontFamily": "'Cascadia Code'"
+    //启用字体连字，如 !=、===是否连为一体。支持此特性字体:JetBrains Mono、Fira Code
+    "editor.fontLigatures": true,
+    //窗口缩放 默认是0。可以按 Ctrl + +/- 缩放。录制视频有用。
+    "window.zoomLevel": 0,
+    //字体大小(px)
+    "editor.fontSize": 13.5,
+    //Jetbrains Fleet Theme配置: JetBrains Mono，lineHeight=1.4,letterSpacing=0.3
+    //行高 如果分辨率高就设置大一点1.6，小就设置为1.45
+    "editor.lineHeight": 1.4,
+    //设置字体精细。一般为400 或 normal，如果是Cascadia Code，可以设置为300，Cascadia Code Light不用设置
+    "editor.fontWeight": "normal",
+    //字符间距，一般为0.3-0.6
+    "editor.letterSpacing": 0.3,
+    //光标样式 line 竖线条，underline 下划线
+    "editor.cursorStyle": "line",
+    // 当 `editor.cursorStyle` 设置为 `line` 时，控制光标的宽度
+    "editor.cursorWidth": 2,
+    //光标的动画样式。expand 最有个性,solid 静止不动，smooth最普通。
+    "editor.cursorBlinking": "blink",
+    //启用平滑插入动画
+    "editor.cursorSmoothCaretAnimation": true,
+    //显示行号：绝对值(还有相对行号)
+    "editor.lineNumbers": "on",
+    //是否显示行号边距(如果不显示配置时没有编辑图标)
+    "editor.glyphMargin": true,
+    //启用代码折叠
+    "editor.folding": true,
+    //在编辑区视图边界换行
+    "editor.wordWrap": "wordWrapColumn",
+    //换行宽度
+    "editor.wordWrapColumn": 100,
+    //缩略图设置(侧边栏高亮后不需要了)
+    "editor.minimap.enabled": false,
+    "editor.minimap.maxColumn": 100,
+    "editor.minimap.size": "fit",
+    "editor.minimap.showSlider": "always",
+    "editor.minimap.renderCharacters": true,
+    //启用后，可以拖放移动选中的内容
+    "editor.dragAndDrop": true,
+    //控制编辑器是否应呈现空白字符
+    "editor.renderWhitespace": "selection",
+    //插入Tab键时替换为空格，设置editor.detectIndentation后失效
+    "editor.insertSpaces": true,
+    //没有选中内容时复制当前行
+    "editor.emptySelectionClipboard": true,
+    //在一定数量的等宽字符后显示垂直标尺，若数组为空，则不绘制标尺
+    "editor.rulers": [
+        80,
+        100,
+        120
+    ],
+    // 控制键入时是否应自动显示建议
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": false,
+        "strings": false
+    },
+    //建议(智能提示)显示延迟时间(毫秒)，太快容易误触发代码段
+    "editor.quickSuggestionsDelay": 5,
+    //智能提示选择项
+    "editor.suggestSelection": "first",
+    //在其它建议上面显示代码段
+    "editor.snippetSuggestions": "top",
+    //在活动代码段内时是否显示智能提示
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    //在智能提示没显示时知道代码段缩写直接按tab键展开
+    "editor.tabCompletion": "on",
+    //滚动时使用动画
+    "editor.smoothScrolling": true,
+    //自动输入结束括号
+    "editor.autoClosingBrackets": "always",
+    //删除括号时自动删除结束括号
+    "editor.autoClosingDelete": "always",
+    //每个括号有独立的颜色池
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+    //括号突出显示颜色（自动分配不同颜色）
+    "editor.bracketPairColorization.enabled": true,
+    //突出显示活动括号
+    "editor.guides.highlightActiveBracketPair": true,
+    //不显示缩进参考线
+    "editor.guides.indentation": false,
+    //仅为活动括号显示参考线
+    "editor.guides.bracketPairs": "active",
+    //自定义括号颜色
+    "workbench.colorCustomizations": {
+        "editorBracketMatch.border": "#233843",
+        "editorBracketMatch.background": "#011627",
+        "editorBracketHighlight.foreground1": "#FFCC66",
+        "editorBracketHighlight.foreground3": "#B084EB",
+        "editorBracketHighlight.foreground2": "#7FCDFF",
+        "editorBracketHighlight.foreground4": "#FF75BC",
+        "editorBracketHighlight.foreground5": "#93FEC0",
+        "editorBracketHighlight.foreground6": "#abb2c0"
+    },
+    //重命名之前预览变更
+    "editor.rename.enablePreview": true,
+    //粘贴内容时自动调整缩进
+    "editor.autoIndent": "advanced",
+    //粘贴内容时自动格式化
+    "editor.formatOnPaste": true,
+    //代码编辑保存时自动格式化
+    "editor.formatOnSave": true,
+    //禁用后，按住Ctrl+滑轮 不会缩放字体
+    "editor.mouseWheelZoom": false,
+    //启用列选择。启用后向下选择自动列模式，按 Alt再选择为普通模式。如果禁用，使用 Alt+Shift 进行列选择
+    "editor.columnSelection": false,
+    //多光标快捷键:ctrl(默认Alt)
+    "editor.multiCursorModifier": "ctrlCmd",
+    //启用后，将在保存文件时剪裁尾随空格
+    "files.trimTrailingWhitespace": true,
+    //打开文件自动解析文件编码
+    "files.autoGuessEncoding": true,
+    //光标总是自动乱跳，这是自动格式化问题
+    "files.autoSaveDelay": 5000,
+    //启用自定义文件对话框
+    "files.simpleDialog.enable": true,
+    //比较差异时不忽略空格
+    "diffEditor.ignoreTrimWhitespace": false,
+    //让函数(名)和后面的大括号之间加个空格
+    "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+    //主边栏和活动栏位置：右边(不影响左边代码)
+    "workbench.sideBar.location": "right",
+    //主题颜色
+    "workbench.colorTheme": "Jetbrains Fleet",
+    //常用主题：Jetbrains Fleet、GitHub Blue、Starfall Palenight、Tokyo Night、Oceanic Next (dimmed bg)
+    //主题在线预览：https://vscodethemes.com
+    //文件图标
+    "workbench.iconTheme": "material-icon-theme",
+    //侧边栏图标
+    "workbench.productIconTheme": "developer-icons",
+    //主题颜色是否语义(包名函数名等)突出显示
+    "editor.semanticHighlighting.enabled": true,
+    // {Syntax Highlighter}插件配置，增强主题配色显示
+    "editor.semanticTokenColorCustomizations": {
+        "enabled": true, // enable for all themes
+        "[Default Dark+]": {
+            "enabled": true // enable for a particular theme
+        },
+        "[Jetbrains Fleet]": {
+            "enabled": true //启用后可以高亮Go包名
+        }
+    },
+    //启用本地文件历史记录
+    "workbench.localHistory.enabled": true,
+    //本地文件历史记录最大数:30。超过后丢弃最早的记录
+    "workbench.localHistory.maxFileEntries": 30,
+    //历史记录文件大小(256KB)，大文件不记录。
+    "workbench.localHistory.maxFileSize": 256,
+    //保留命令历史数量
+    "workbench.commandPalette.history": 20,
+    //启动后没有打开编辑器显示首页
+    "workbench.tips.enabled": true,
+    //启动后显示编辑页
+    "workbench.startupEditor": "newUntitledFile",
+    //启用平滑滚动动画
+    "workbench.list.smoothScrolling": true,
+    //关闭 固定打开的编缉器(没什么用)
+    "explorer.openEditors.visible": 0,
+    //保存时自动修复
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true
+    },
+    //高亮显示非ASCII字符
+    "editor.unicodeHighlight.nonBasicASCII": false,
+    "editor.unicodeHighlight.allowedLocales": {
+        "zh-hans": true
+    },
+    //调试工具栏设为固定位置
+    "debug.toolBarLocation": "docked",
+    //Live Server预览端口，实时预览网页内容
+    "liveServer.settings.port": 5051,
+    //终端默认命令工具，可以按F1输入：terminal select选择
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    //打开设置时以界面方式展示(ui 或 json)
+    "workbench.settings.editor": "ui",
+    //发送报告
+    "telemetry.telemetryLevel": "error",
+    //显示扩展建议，如文件类型对应的高亮扩展
+    "extensions.ignoreRecommendations": false,
+    //扩展插件自动更新
+    "extensions.autoUpdate": true,
+    //软件更新：使用手动更新
+    "update.mode": "manual",
+    //Go LSP Server 配置
+    "gopls": {
+        // Jetbrains Fleet 主题设置Go语言Token如 package、import、func等关键字高亮
+        "ui.semanticTokens": true,
+        // import 导入的包名不显示下划线(默认Both有下划线)
+        "ui.navigation.importShortcut": "Definition"
+    },
+    "cSpell.userWords": [
+        "gopls",
+        "Jetbrains",
+        "Ludard",
+        "stringintconv"
+    ]
+}

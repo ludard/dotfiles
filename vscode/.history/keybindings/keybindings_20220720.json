@@ -39,7 +39,7 @@
     },
     {
         //显示问题面板
-        "key": "ctrl+shift+m",
+        "key": "ctrl+alt+m",
         "command": "workbench.action.search.toggleQueryDetails",
         "when": "searchViewletVisible"
     },
@@ -128,11 +128,5 @@
         "key": "ctrl+alt+oem_plus",
         "command": "wwm.aligncode",
         "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        //自动实现 Golang 接口(e表示extend) 编辑器任意位置都可使用
-        //输入格式：f *File io.Closer(前2个是接收者，第3个是接口名称)
-        "key": "ctrl+k ctrl+e",
-        "command": "go.impl.cursor"
     }
 ]
