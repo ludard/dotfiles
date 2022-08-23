@@ -1,0 +1,159 @@
+{
+	// Place your snippets for go here. Each snippet is defined under a snippet name and has a prefix, body and
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	//Snippet Guide: https://code.visualstudio.com/api/language-extensions/snippet-guide
+	//https://code.visualstudio.com/docs/editor/userdefinedsnippets#_creating-your-own-snippets
+	//https://code.visualstudio.com/docs/editor/userdefinedsnippets
+	"vari": {
+		"prefix": "vari",
+		"body": [
+			"${1:i} := ${2:0}$3"
+		],
+		"description": "i := 0 函数内部int变量声明"
+	},
+	"vars": {
+		"prefix": "vars",
+		"body": [
+			"${1:str} := \"$2\"$3"
+		],
+		"description": "define str := \"\" 函数内部string变量声明"
+	},
+	"varserr": {
+		"prefix": "varserr",
+		"body": [
+			"${1:str}, ${2:err} := $3"
+		],
+		"description": "str, err := value 短变量和错误变量一起声明赋值"
+	},
+	"vararr": {
+		"prefix": "vararr",
+		"body": [
+			"var ${1:arrary} [${2:0}]${3:string}$4"
+		],
+		"description": "var arrary [0]string 数组声明"
+	},
+	"varmap": {
+		"prefix": "varmap",
+		"body": [
+			"${1:dict} := map[${2:string}]${3:string}{$4}"
+		],
+		"description": "dict := map[string]string{} map声明"
+	},
+	"vararrval": {
+		"prefix": "vararrval",
+		"body": [
+			"${1:arrary} := [${2:...}]${3:string}{$4}"
+		],
+		"description": "arrary := [...]string{} 数组声明赋值"
+	},
+	"varchan": {
+		"prefix": "varchan",
+		"body": [
+			"${1:c} := <-${2:ch}$3"
+		],
+		"description": "c := <-chan channel声明赋值"
+	},
+	"varslice": {
+		"prefix": "varslice",
+		"body": [
+			"${1:slice} := []${2:string}{$3}"
+		],
+		"description": "slice := []string{} 切片声明赋值"
+	},
+	"arrslice": {
+		"prefix": "arrslice",
+		"body": [
+			"${1:slice} := ${2:arr}[${3:start}:${4:stop}]$5"
+		],
+		"description": "slice := arr[start:stop] 从数组提取切片"
+	},
+	"makeslice": {
+		"prefix": "makeslice",
+		"body": [
+			"${1:slice} := make([]${2:int}, ${3:0}, ${4:0})$5"
+		],
+		"description": "slice := make([]int, 0, 0) 创建make切片并指定容量"
+	},
+	"makechan": {
+		"prefix": "makechan",
+		"body": [
+			"${1:ch} := make(chan ${2:struct{\\}}, ${3:0})$4"
+		],
+		"description": "ch := make(chan struct{}, 0) 创建make channel并指定容量"
+	},
+	"<-chan": {
+		"prefix": "chr",
+		"body": [
+			"<-${1:chan}$2"
+		],
+		"description": "<-chan read"
+	},
+	"chan<-": {
+		"prefix": "chw",
+		"body": [
+			"${1:chan}<-$2"
+		],
+		"description": "chan<- write"
+	},
+	"ffn": {
+		"prefix": "ffn",
+		"body": [
+			"fmt.Printf(\"$1\\n\", ${2:var})$3"
+		],
+		"description": "fmt.Printf 默认带\\n输出"
+	},
+	"chanpipe": {
+		"prefix": "chanpipe",
+		"body": [
+			"${1:ch} <- ${2:sender}$3"
+		],
+		"description": "ch <-sender"
+	},
+	//新加一个字符串，绑定快捷键：Ctrl + k + a(append)
+	"addStrItem": {
+		"prefix": "addStrItem",
+		"body": [
+			"\"$1\",$2"
+		],
+		"description": "define str := \"\" 函数内部string变量声明"
+	},
+	"fileopen": {
+		"prefix": "fileopen",
+		"body": [
+			"${1:f}, ${2:err} := os.Open(\"${3:filename}\")\nif ${2:err} != nil {\n\tpanic(${2:err})\n}\ndefer ${1:f}.Close()"
+		],
+		"description": "fileopen"
+	},
+	"gofunc": {
+		"prefix": "gofunc",
+		"body": [
+			"go func() {\n\t$1\n}()\n"
+		],
+		"description": "go func() {...}"
+	},
+	"forsel": {
+		"prefix": "forsel",
+		"body": [
+			"for {\n\tselect {\n\tcase ${1:condition}:\n\t\t$2\n\t}\n}"
+		],
+		"description": "for select {...}"
+	},
+	"timeelapsed": {
+		"prefix": "timeelapsed",
+		"body": [
+			"${1:start} := time.Now()\n$3\n${2:elapsed} := time.Since(${1:start})"
+		],
+		"description": "time elapsed 时间计时代码段"
+	},
+}
