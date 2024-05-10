@@ -1,16 +1,16 @@
 {
   /**
-    VS Code Version: 1.79.0
+    VS Code Version: 1.89.1
     file path: C:\Users\Ludard\AppData\Roaming\Code\User\settings.json
-    modify date: 2023-6-9
+    modify date: 2024-5-10
   */
   /**
-    低分辨率配置：
+    4K分辨率配置：
     "editor.fontFamily": "MesloLGS NF,'微软雅黑', Consolas, 'Courier New', monospace",
-    "editor.fontSize": 13,
-    "window.zoomLevel": 0.2,
+    "editor.fontSize": 15,
+    "window.zoomLevel": -0.5,
     "editor.lineHeight": 1.4,
-    "editor.fontWeight": "normal",
+    "editor.fontWeight": 400,
     "editor.letterSpacing": 0.3,
     "workbench.colorTheme": "grapevine",
   */
@@ -20,20 +20,19 @@
   //常用字体: "JetBrains Mono Light,Droid Sans Mono Slashed,Comic Mono,Lucida Console,Consolas,Cascadia Code Light,Fira Code Light,MesloLGS NF",
   //设置字体 英文:MesloLGS NF，中文:微软雅黑
   //Dark主题使用Light清晰一些，Light正常清楚一些
-  //"JetBrains Mono Light,Cascadia Mono Light,MesloLGS NF,'微软雅黑',Consolas"
-  "editor.fontFamily": "MesloLGS NF,'微软雅黑', Consolas, 'Courier New', monospace",
+  //"MesloLGS NF,CodeNewRoman Nerd Font,Cascadia Mono,JetBrainsMono,'微软雅黑',Consolas"
+  "editor.fontFamily": "MesloLGS NF, Consolas, 'Courier New', monospace",
   // "terminal.integrated.fontFamily": "'Cascadia Code Light'",
   //启用字体连字，如 !=、===是否连为一体。支持此特性字体:JetBrains Mono、Fira Code
   "editor.fontLigatures": true,
   //字体大小(px) MesloLGS NF/Monaco:13,JetBrains Mono:13.5,Cascadia Code 14
-  "editor.fontSize": 13.5,
-  //窗口缩放，如果字体较小可以设置大一点。Lightbulb 主题设为0.45
-  "window.zoomLevel": 0.2,
+  "editor.fontSize": 15,
   //Jetbrains Fleet Theme配置: JetBrains Mono，lineHeight=1.4,letterSpacing=0.3
-  //行高 如果分辨率高就设置大一点1.6，小就设置为1.45
-  "editor.lineHeight": 1.4,
+  //行高 如果分辨率高就设置大一点1.6，小就设置为1.4
+  "window.zoomLevel": -0.5,
+  "editor.lineHeight": 1.2,
   //设置字体精细。一般为400 或 normal，如果是Cascadia Mono，可以设置为300，Cascadia Code Light不用设置
-  "editor.fontWeight": "normal",
+  "editor.fontWeight": 500,
   //字符间距，一般为0.3-0.6
   "editor.letterSpacing": 0.3,
   //光标样式 line 竖线条，underline 下划线
@@ -135,7 +134,7 @@
   //是否显示缩进参考线
   "editor.guides.indentation": false,
   //是否显示括号参考线 "active" 仅活动代码块显示，true 显示，false 不显示
-  "editor.guides.bracketPairs": "false",
+  "editor.guides.bracketPairs": false,
   "editor.guides.bracketPairsHorizontal": false,
   //禁用后，按住Ctrl+滑轮 不会缩放字体
   "editor.mouseWheelZoom": false,
@@ -172,7 +171,7 @@
   "editor.formatOnSave": true,
   //保存时自动修复
   "editor.codeActionsOnSave": {
-    "source.fixAll": true
+    "source.fixAll": "explicit"
   },
   //高亮显示非ASCII字符
   "editor.unicodeHighlight.nonBasicASCII": false,
@@ -191,30 +190,33 @@
   "files.autoSaveDelay": 5000,
   //启用自定义文件对话框
   "files.simpleDialog.enable": true,
-  //常用暗色主题：
-  //一等: Snazzy、Night Owl、Catppuccin Frappé、Catppuccin Macchiato、Andromeda Mariana - Bordered、
-  //Nightfox、Nord Deep、Tokyo Night Storm、grapevine
-  //freeCodeCamp Dark Theme、One Monokai、Adapta Nokto、Default Dark+、
-  //Starfall Palenight、DartPad Candy、Oceanic Next (dimmed bg)、
-  // 二等: GitHub Dark Dimmed、GitHub Blue、Cobalt2、Dracula Soft、Rosé Pine Moon、UrbanForge、
-  // Atom One Dark、Gatito Theme、vuesion、Mariana、Nord、Jetbrains Fleet、
-  // Penumbra Dark Contrast+、Dark Neon Theme(SM)、aclear-dark
-  // Slack Theme Dark Mode、Slack Theme Aubergine Dark、Tailwind Dark Gray、Peacock、
-  // Kanagawa、Mystic Classic、
-  // 未来极客风： SynthWave Refined、Cybervision
-  // 亮色主题： Community Material Theme Lighter High Contrast（Material Theme主题包）
-  // Bluloco Light、Brackets Light Pro、Vitesse Light、Slack Theme Hoth、
-  // Atom One Light、Soda、PlainTheme、Catppuccin Latte
+  //1.83.0编辑器选项卡高度 compact:紧凑更小
+  "window.density.editorTabHeight": "default",
+  //主题随系统亮暗自动切换对应亮暗主题
+  // "window.autoDetectColorScheme": true,
+  // "workbench.preferredLightColorTheme": "Catppuccin Macchiato",
+  // "workbench.preferredDarkColorTheme": "Catppuccin Mocha",
+  //主题设置
+  "workbench.colorTheme": "Catppuccin Macchiato",
+  //4K分辨率主题：
+  //暗色：
+  // Default Dark Modern、One Monokai、Catppuccin Macchiato、
+  // Andromeda Mariana - Bordered、Atom One Dark、JetBrains New Dark、
+  // Moegi Space、Night Owl、Idx Dark Theme、
+  // OneNord、Nord Deep、Tokyo Night Storm、nloo-Theme、Easter Egg、
+  // 、
+  //亮色：
+  // Brackets Light Pro、FlatUI Immersed、Kite light、Moegi Dawn
+  //主题自定义设置
+  "catppuccin.boldKeywords": false,
+  "catppuccin.accentColor": "lavender",
   // 主题在线预览： https://vscodethemes.com
   //文件图标 升级定制版：Atom Material Icons
   "workbench.iconTheme": "material-icon-theme",
   //文件夹图标类型
   "material-icon-theme.folders.theme": "specific",
-  //default:#A5D6F5 亮蓝：#79C0FF 浅蓝：#42a5f5 深灰色：#8695b7
-  "material-icon-theme.folders.color": "#42a5f5",
   //隐藏文件夹旁边的连线和箭头
   "material-icon-theme.hidesExplorerArrows": true,
-  "workbench.editor.wrapTabs": false,
   //主题颜色是否语义(包名函数包名、常量、参数等)突出显示
   "editor.semanticHighlighting.enabled": true,
   //以下主题已处理好不需要开启： Nord、Mariana、Dracula
@@ -332,9 +334,9 @@
       "editorSuggestWidget.highlightForeground": "#F5A97F"
     }
   },
-  //主题自带设置
-  "catppuccin.boldKeywords": false,
-  "catppuccin.accentColor": "lavender",
+  //====================================
+  //页面tab标签是否换行，不喜欢换行直接在一行显示所有标签页
+  "workbench.editor.wrapTabs": false,
   //启用本地文件历史记录
   "workbench.localHistory.enabled": true,
   //本地文件历史记录最大数:30。超过后丢弃最早的记录
@@ -365,7 +367,7 @@
   "typescript.updateImportsOnFileMove.enabled": "always",
   //关闭 固定打开的编缉器(没什么用)
   //1.79.0版本设置后依然可见，关闭方法：在资源管理器或打开的编辑器边框上右键 隐藏"打开的编辑器"
-  "explorer.openEditors.visible": 0,
+  "explorer.openEditors.visible": 10,
   "explorer.openEditors.minVisible": 0,
   "explorer.openEditors.sortOrder": "editorOrder",
   //调试工具栏位置。floating：编辑器窗口上方 floating：运行和调试窗口上方
@@ -469,6 +471,5 @@
     "Roboto",
     "Prex",
   ],
-  "redhat.telemetry.enabled": false,
-  "workbench.colorTheme": "Minimal UI"
+  "window.titleBarStyle": "custom",
 }
