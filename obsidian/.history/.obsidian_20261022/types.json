@@ -1,0 +1,20 @@
+{
+  "types": {
+    "aliases": "aliases",
+    "cssclasses": "multitext",
+    "tags": "tags",
+    "成本价": "number",
+    "成本价(￥)": "number",
+    "最低售价($)": "number",
+    "销售状态": "text",
+    "毛利率": "number",
+    "创建时间": "datetime",
+    "修改时间": "datetime",
+    "上架时间": "date",
+    "状态": "text",
+    "重要值": "text",
+    "更新时间": "datetime",
+    "采集时间": "date",
+    "商品名称": "text"
+  }
+}

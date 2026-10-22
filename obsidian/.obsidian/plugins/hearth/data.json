@@ -1,0 +1,272 @@
+{
+  "title": "Obsidian",
+  "showTitle": true,
+  "titleIcon": "",
+  "tabIcon": "",
+  "themeColorTarget": "both",
+  "showSearch": true,
+  "searchPlaceholder": "Search or command",
+  "showNewNoteButton": false,
+  "newNoteButtonMode": "searchOnline",
+  "newNoteButtonLabel": "",
+  "newNoteTemplate": "",
+  "newNoteFolder": "",
+  "newNoteFilename": "",
+  "searchContents": true,
+  "searchEngine": "builtin",
+  "backgroundKind": "image",
+  "backgroundValue": "Z-Resources/Attachments/海岸.jpg",
+  "backgroundOpacity": 0.35,
+  "backgroundBlur": 2,
+  "backgroundLayout": "banner",
+  "bannerHeight": 220,
+  "bannerFade": true,
+  "bannerFullWidth": true,
+  "openOnStartup": true,
+  "replaceNewTabs": true,
+  "focusSearchOnOpen": false,
+  "liveRefresh": false,
+  "mobileSearchOnly": false,
+  "showMobileActionBar": true,
+  "mobileActionButtons": [
+    {
+      "id": "action-new-note",
+      "label": "New note",
+      "icon": "plus",
+      "type": "command",
+      "target": "hearth:new-note"
+    },
+    {
+      "id": "action-new-drawing",
+      "label": "New drawing",
+      "icon": "pen-tool",
+      "type": "command",
+      "target": "hearth:new-drawing"
+    },
+    {
+      "id": "action-record-voice",
+      "label": "Record voice",
+      "icon": "mic",
+      "type": "command",
+      "target": "hearth:record-voice"
+    },
+    {
+      "id": "action-daily-note",
+      "label": "Daily note",
+      "icon": "calendar",
+      "type": "command",
+      "target": "hearth:open-daily-note"
+    }
+  ],
+  "stackOnNarrow": true,
+  "disableExternalCalls": false,
+  "openIn": "tab",
+  "openInOverrides": {
+    "link": "default",
+    "search": "default",
+    "card": "default",
+    "newNote": "default"
+  },
+  "openFromOutside": "same",
+  "performanceTier": "full",
+  "mobilePerformanceTier": "balanced",
+  "lowPowerBackgroundColor": "#4a4459",
+  "pauseWhenUnfocused": true,
+  "compact": false,
+  "arrangeButtonVisibility": "always",
+  "dashboardSwitcherVisibility": "always",
+  "cardOpacity": 0.5,
+  "cardBlur": 0,
+  "cardRadius": 14,
+  "cardBorderWidth": 1,
+  "hiddenFilters": [],
+  "dashboards": [
+    {
+      "id": "dash-mtjga7z9-9728",
+      "name": "主页",
+      "cards": [
+        {
+          "kind": "clock",
+          "title": "",
+          "x": 0,
+          "y": 0,
+          "w": 12,
+          "h": 2,
+          "id": "card-mtjgdqxw-0-2337",
+          "fx": 0,
+          "fw": 0.2476489028213166,
+          "fy": 0,
+          "fh": 180,
+          "clock": {
+            "dateMode": "long"
+          }
+        },
+        {
+          "kind": "tasks",
+          "title": "待办事项",
+          "x": 6,
+          "y": 2,
+          "w": 6,
+          "h": 5,
+          "tasks": {},
+          "id": "card-mtjgdqxw-2-2576",
+          "fx": 0,
+          "fw": 0.42737722048066873,
+          "fy": 196,
+          "fh": 278
+        },
+        {
+          "kind": "recent",
+          "title": "最近打开",
+          "count": 8,
+          "x": 4,
+          "y": 7,
+          "w": 4,
+          "h": 4,
+          "id": "card-mtjgdqxw-4-3967",
+          "fx": 0.7074190177638453,
+          "fw": 0.29258098223615464,
+          "fy": 195,
+          "fh": 270
+        },
+        {
+          "kind": "favorites",
+          "title": "收藏",
+          "x": 8,
+          "y": 7,
+          "w": 4,
+          "h": 3,
+          "id": "card-mtjgdqxw-5-6767",
+          "fx": 0.5172413793103449,
+          "fw": 0.4827586206896552,
+          "fy": 482,
+          "fh": 368,
+          "mobile": {
+            "height": 70,
+            "collapsed": true
+          }
+        },
+        {
+          "kind": "stats",
+          "title": "仓库统计",
+          "x": 0,
+          "y": 13,
+          "w": 4,
+          "h": 2,
+          "id": "card-mtjgdqxw-8-4282",
+          "fx": 0.6060606060606061,
+          "fw": 0.3939393939393939,
+          "fy": 0,
+          "fh": 180,
+          "stats": {
+            "advanced": true,
+            "queries": [
+              {
+                "id": "stat-mtjh3mcb-2646",
+                "query": ""
+              }
+            ],
+            "builtins": [
+              "notes",
+              "attachments",
+              "folders",
+              "tags"
+            ]
+          }
+        },
+        {
+          "kind": "dataview",
+          "title": "Ozon重点商品",
+          "dataview": {
+            "query": "table 商品名称, 重要值 as 重要, dateformat(更新时间, \"yyyy-MM-dd\") as 更新时间\nfrom \"B-电商平台/OZON/1店-商品库\" \nwhere 重要值 > \"⭐\" and 状态 = \"在售\"\nsort 重要值 desc, 更新时间 desc\nLIMIT 12",
+            "language": "dql"
+          },
+          "x": 0,
+          "y": 15,
+          "w": 4,
+          "h": 4,
+          "id": "card-mtjgdqxw-10-5393",
+          "fx": 0,
+          "fw": 0.5005224660397074,
+          "fy": 484,
+          "fh": 366
+        },
+        {
+          "id": "card-mtjzla8p-8613",
+          "x": 0,
+          "y": 5,
+          "kind": "web",
+          "title": "人民币兑卢布汇率",
+          "url": "https://kurs-rublya.ru/api/v1/embed/cny/",
+          "w": 6,
+          "h": 4,
+          "fx": 0.26436781609195403,
+          "fy": 0,
+          "fw": 0.32497387669801464,
+          "fh": 180
+        },
+        {
+          "id": "card-mtkuo56s-4796",
+          "x": 0,
+          "y": 5,
+          "kind": "text",
+          "title": "今日事项",
+          "text": "",
+          "w": 4,
+          "h": 2,
+          "fx": 0.4440961337513062,
+          "fy": 196,
+          "fw": 0.2507836990595611,
+          "fh": 272
+        }
+      ],
+      "fitToPage": false,
+      "header": {
+        "showTitle": true,
+        "titleIcon": "",
+        "themeColorTarget": "both",
+        "title": "电商工作台"
+      },
+      "showSearch": true,
+      "cardOpacity": 0.5,
+      "cardBlur": 7,
+      "cardRadius": 14,
+      "cardBorderWidth": 1,
+      "compact": false,
+      "background": {
+        "kind": "image",
+        "value": "Z-Resources/Attachments/海岸.jpg",
+        "opacity": 0.25,
+        "blur": 4
+      },
+      "backgroundLayout": "full"
+    }
+  ],
+  "activeDashboardId": "dash-mtjga7z9-9728",
+  "pinnedCards": [],
+  "gridColumns": 12,
+  "rowHeight": 92,
+  "favorites": [
+    "B-电商平台/OZON/常规操作/深圳润百仓库商品列表20260622.md",
+    "B-电商平台/OZON/常规操作/评论按星级回复模板.md",
+    "B-电商平台/OZON/常规操作/评价回复和高频问答.md",
+    "B-电商平台/OZON/常规操作/俄语字母表.md",
+    "B-电商平台/OZON/💴1店-商品概况_SKU.md",
+    "B-电商平台/OZON/👑2店-商品概况.md"
+  ],
+  "fitToPage": true,
+  "taskNotesStatusField": "status",
+  "taskNotesDueField": "due",
+  "taskNotesPriorityField": "priority",
+  "taskNotesDoneValue": "done",
+  "taskFieldsEnabled": false,
+  "taskFields": [],
+  "customFileIcons": true,
+  "iconizeIconProperty": "icon",
+  "operonIntegration": true,
+  "operonWrites": false,
+  "maxWidth": 1600,
+  "fullWidth": false,
+  "lastSeenVersion": "3.0.0",
+  "setupStatus": "done"
+}
