@@ -24,7 +24,8 @@ PDE is Professional Development Environment. Contains programming configurations
 
 - [x] Themes & Plugin & Configurations
 
-  
+- [x] 配置文件历史版本
+
 
 ## Neovim(Deprecated)
 
