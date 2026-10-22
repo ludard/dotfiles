@@ -1,6 +1,7 @@
 // 将键绑定放在此文件中以覆盖默认值auto[]
 [
   {
+    //显示/隐藏 终端
     "key": "ctrl+alt+p",
     "command": "workbench.action.togglePanel"
   },
@@ -49,6 +50,7 @@
     "when": "searchViewletVisible"
   },
   {
+    //合并行
     "key": "ctrl+shift+j",
     "command": "editor.action.joinLines"
   },
@@ -141,6 +143,11 @@
     "command": "workbench.action.terminal.moveToEditor"
   },
   {
+    //将终端显示在新的浮动窗口
+    "key": "ctrl+alt+o",
+    "command": "workbench.action.terminal.moveIntoNewWindow"
+  },
+  {
     //符号对齐。 Ctrl + Alt + =
     "key": "ctrl+alt+oem_plus",
     "command": "wwm.aligncode",
@@ -157,5 +164,23 @@
     // Ctrl + Alt + \ 将当前编辑器作为新窗口打开(向右)
     "key": "alt+oem_5", //向下拆分编辑器
     "command": "workbench.action.splitEditorDown"
+  },
+  {
+    // 删除系统快捷键,将这个快捷键改为用户快捷键
+    "key": "ctrl+k ctrl+d",
+    "command": "-editor.action.moveSelectionToNextFindMatch",
+    "when": "editorFocus"
+  },
+  {
+    //格式化文档
+    "key": "ctrl+k ctrl+d",
+    "command": "editor.action.formatDocument",
+    "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
+  },
+  {
+    //格式化文档,从系统复制只改快捷键
+    "key": "ctrl+k ctrl+d",
+    "command": "editor.action.formatDocument.none",
+    "when": "editorTextFocus && !editorHasDocumentFormattingProvider && !editorReadonly"
   }
 ]

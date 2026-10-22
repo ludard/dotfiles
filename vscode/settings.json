@@ -1,8 +1,11 @@
 {
   /**
-    VS Code Version: 1.89.1
-    file path: C:\Users\Ludard\AppData\Roaming\Code\User\settings.json
-    modify date: 2024-5-10
+    VS Code Version: 1.115.0
+    settings: C:\Users\Ludard\AppData\Roaming\Code\User\settings.json
+    keybindings:C:\Users\ludard\AppData\Roaming\Code\User\keybindings.json
+    snippets:运行[%APPDATA%\Code\User\snippets\] C:\Users\ludard\AppData\Roaming\Code\User\snippets
+    extensions: code.cmd --list-extensions
+    modify date: 2026-10-22
   */
   /**
     4K分辨率配置：
@@ -22,52 +25,49 @@
   //Dark主题使用Light清晰一些，Light正常清楚一些
   //"MesloLGS NF,CodeNewRoman Nerd Font,Cascadia Mono,JetBrainsMono,'微软雅黑',Consolas"
   "editor.fontFamily": "MesloLGS NF, Consolas, 'Courier New', monospace",
-  // "terminal.integrated.fontFamily": "'Cascadia Code Light'",
-  //启用字体连字，如 !=、===是否连为一体。支持此特性字体:JetBrains Mono、Fira Code
-  "editor.fontLigatures": true,
-  //字体大小(px) MesloLGS NF/Monaco:13,JetBrains Mono:13.5,Cascadia Code 14
+  //字体大小
   "editor.fontSize": 15,
+  //启用字体连字,比如 >=
+  "editor.fontLigatures": true,
   //Jetbrains Fleet Theme配置: JetBrains Mono，lineHeight=1.4,letterSpacing=0.3
   //行高 如果分辨率高就设置大一点1.6，小就设置为1.4
   "window.zoomLevel": -0.5,
-  "editor.lineHeight": 1.2,
   //设置字体精细。一般为400 或 normal，如果是Cascadia Mono，可以设置为300，Cascadia Code Light不用设置
   "editor.fontWeight": 500,
   //字符间距，一般为0.3-0.6
   "editor.letterSpacing": 0.3,
+  //设置行高,默认1.3 Winter is Coming fontSize=16,lineHeight=25
+  "editor.lineHeight": 1.3,
+  //光标动画样式
+  "editor.cursorBlinking": "solid",
   //光标样式 line 竖线条，underline 下划线
   "editor.cursorStyle": "line",
   // 当 `editor.cursorStyle` 设置为 `line` 时，控制光标的宽度
   "editor.cursorWidth": 2,
-  //光标的动画样式。blink 最常用，expand 最个性,solid 静止不动，smooth 最平滑淡入淡出
-  "editor.cursorBlinking": "blink",
-  //启用平滑插入动画
-  "editor.cursorSmoothCaretAnimation": "on",
   //显示行号：绝对值(还有相对行号) on 显示行号 relative 相对行号
   "editor.lineNumbers": "on",
   //是否显示行号边距(如果不显示配置时没有编辑图标)
   "editor.glyphMargin": true,
   //启用代码折叠
   "editor.folding": true,
-  //在编辑区视图边界换行
-  "editor.wordWrap": "wordWrapColumn",
+  //在编辑区视图边界换行 on=高寒宽度换行如100、wordWrapColumn=编辑器最右边换行
+  "editor.wordWrap": "on",
   //换行宽度
   "editor.wordWrapColumn": 100,
   //关闭自动检查，直接将缩进和tab设置为2个字符
   "editor.detectIndentation": false,
   // tab的空格数，默认4
   "editor.tabSize": 2,
-  //缩略图设置
-  "editor.minimap.enabled": false,
-  "editor.minimap.autohide": true,
+  //显示编辑器代码地图
+  "editor.minimap.enabled": true,
+  //鼠标悬停显示代码地图
+  "editor.minimap.autohide": "mouseover",
   "editor.minimap.maxColumn": 100,
   "editor.minimap.size": "fit",
   "editor.minimap.showSlider": "always",
   "editor.minimap.renderCharacters": true,
   //启用后，可以拖放移动选中的内容
   "editor.dragAndDrop": true,
-  //控制编辑器是否应呈现空白字符
-  "editor.renderWhitespace": "selection",
   //插入Tab键时替换为空格，设置editor.detectIndentation后失效
   "editor.insertSpaces": true,
   //没有选中内容时复制当前行
@@ -83,7 +83,7 @@
     //true:弹窗提示 inline:显示为虚拟文本 false:不显示
     "strings": "inline",
     "comments": "inline",
-    "other": true,
+    "other": true
   },
   //显示提示时优先使用光标附近的单词
   "editor.suggest.localityBonus": true,
@@ -115,26 +115,18 @@
   //inline:在其它建议中间，如果变量前缀都匹配以变量优先
   "editor.snippetSuggestions": "inline",
   "editor.suggest.showInterfaces": true,
-  //滚动时使用动画
-  "editor.smoothScrolling": true,
   //自动输入结束括号
   "editor.autoClosingBrackets": "always",
   //删除括号时自动删除结束括号
   "editor.autoClosingDelete": "always",
   //选中括号时突出显示匹配的括号
   "editor.matchBrackets": "always",
-  //括号突出显示颜色（自动分配不同颜色）
-  "editor.bracketPairColorization.enabled": false,
   //每个括号有独立的颜色池
   "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
   //突出显示活动括号
   "editor.guides.highlightActiveBracketPair": true,
-  //滚动时置顶当前作用域函数
-  "editor.stickyScroll.enabled": true,
   //是否显示缩进参考线
   "editor.guides.indentation": false,
-  //是否显示括号参考线 "active" 仅活动代码块显示，true 显示，false 不显示
-  "editor.guides.bracketPairs": false,
   "editor.guides.bracketPairsHorizontal": false,
   //禁用后，按住Ctrl+滑轮 不会缩放字体
   "editor.mouseWheelZoom": false,
@@ -142,9 +134,9 @@
   "editor.multiCursorModifier": "ctrlCmd",
   //启用列选择。启用后向下选择自动列模式，按 Alt再选择为普通模式。如果禁用，使用 Alt+Shift 进行列选择
   "editor.columnSelection": false,
-  //双击选中文本的分隔符，加上中文分隔符（、，。“”？！） 去除 -
+  //双击选中文本的分隔符，加上中文分隔符（、，。“”？！，。：） 去除 -
   //默认："`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?"
-  "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.（、，。“”？！）<>/?",
+  "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.（、，。“”？！，。：）<>/?，。：",
   //CJK 字符(中日韩)不使用断行，保持在同一行上(1.74版本新增)
   "editor.wordBreak": "keepAll",
   //重命名之前预览变更
@@ -153,8 +145,7 @@
   "editor.linkedEditing": true,
   // 配置自动关闭tag 替代 Auto Close Tag 插件
   "html.autoClosingTags": true,
-  "javascript.autoClosingTags": true,
-  "typescript.autoClosingTags": true,
+  "js/ts.autoClosingTags.enabled": true,
   "editor.autoClosingQuotes": "always",
   //鼠标悬停提示上时全部内容一直可见(不用滚动内容)
   "editor.hover.sticky": true,
@@ -167,6 +158,8 @@
   "editor.autoIndent": "advanced",
   //粘贴内容时自动格式化
   "editor.formatOnPaste": true,
+  //代码编辑一行时自动格式化
+  "editor.formatOnType": false,
   //代码编辑保存时自动格式化
   "editor.formatOnSave": true,
   //保存时自动修复
@@ -180,37 +173,40 @@
   },
   //搜索结果展现形式， list:列表， tree:树形
   "search.defaultViewMode": "list",
-  //让函数(名)和后面的大括号之间加个空格
-  "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
   //启用后，将在保存文件时剪裁尾随空格
   "files.trimTrailingWhitespace": true,
   //打开文件自动解析文件编码
   "files.autoGuessEncoding": true,
+  //编辑后延迟间隔时间自动保存
+  "files.autoSave": "afterDelay",
   //光标总是自动乱跳，这是自动格式化问题
   "files.autoSaveDelay": 5000,
   //启用自定义文件对话框
   "files.simpleDialog.enable": true,
+  //搜索结果显示行号
+  "search.showLineNumbers": true,
+  //禅模式是否居中布局
+  "zenMode.centerLayout": false,
   //1.83.0编辑器选项卡高度 compact:紧凑更小
   "window.density.editorTabHeight": "default",
+  "window.autoDetectColorScheme": false,
+  //自定义主题
+  "workbench.colorTheme": "Winter is Coming (Dark Blue - No Italics)",
+  //4K分辨率主题：
+  //暗色：
+  // Default Dark Modern、One Monokai、Night Owl、
+  // JetBrains New Dark、Nord Deep、ZED Editor Dark Theme、
+  // Air dark、Winter is Coming (Dark Blue - No Italics)
+  //
+  //亮色：
+  // Brackets Light Pro、FlatUI Immersed、Calico Light、
+  //
+  // 主题在线预览： https: //vscodethemes.com
   //主题随系统亮暗自动切换对应亮暗主题
   // "window.autoDetectColorScheme": true,
   // "workbench.preferredLightColorTheme": "Catppuccin Macchiato",
   // "workbench.preferredDarkColorTheme": "Catppuccin Mocha",
-  //主题设置
-  "workbench.colorTheme": "Catppuccin Macchiato",
-  //4K分辨率主题：
-  //暗色：
-  // Default Dark Modern、One Monokai、Catppuccin Macchiato、
-  // Andromeda Mariana - Bordered、Atom One Dark、JetBrains New Dark、
-  // Moegi Space、Night Owl、Idx Dark Theme、
-  // OneNord、Nord Deep、Tokyo Night Storm、nloo-Theme、Easter Egg、
-  // 、
-  //亮色：
-  // Brackets Light Pro、FlatUI Immersed、Kite light、Moegi Dawn
-  //主题自定义设置
-  "catppuccin.boldKeywords": false,
-  "catppuccin.accentColor": "lavender",
-  // 主题在线预览： https://vscodethemes.com
+  //
   //文件图标 升级定制版：Atom Material Icons
   "workbench.iconTheme": "material-icon-theme",
   //文件夹图标类型
@@ -227,34 +223,6 @@
     "[Default Dark+]": {
       "enabled": false // enable for a particular theme
     },
-    "[Jetbrains Fleet]": {
-      "enabled": true //启用后可以高亮Go包名
-    },
-    "[freeCodeCamp Dark Theme]": {
-      // 正常情况关键字正常，但是类型没有颜色
-      // 开启semanticHighlighting.enabled 后，类型颜色显示正常，但是关键字不正常了
-      // 再关闭"ui.semanticTokens": false就一切正常.可以开启并重写关键字颜色
-      // 需要启用 Syntax Highlighter 插件代替 gopls ui.semanticTokens解析
-      "enabled": true,
-      "rules": {
-        "keyword": "#DBB8FF",
-      }
-    },
-    "[Snazzy]": {
-      //editor.semanticHighlighting.enabled 启用后关键字颜色不正常
-      //正常颜色：https://marketplace.visualstudio.com/items?itemName=SnazzyTheme.snazzy-vscode
-      "enabled": true,
-      "rules": {
-        //开启semanticHighlighting后变成深黄了 #ffae57
-        "keyword": "#5ccfe6", //默认紫色：#c3a6ff
-        "type": "#c3a6ff", //深黄：#ffae57 设置后统一内置类型和自定义类型
-        "function": "#ffae57", //默认淡蓝色：#5ccfe6
-        "method": "#ffae57",
-        "operator": "#ef6b73",
-        "number": "#f78c6c", //默认紫色和type颜色冲突
-        "*.readonly": "#e9b1e9" //Mariana 关键字:#c695c6
-      }
-    },
     "[Night Owl]": {
       "enabled": true,
       "rules": {
@@ -263,29 +231,23 @@
         "*.readonly": "#7fdbca" //常量名
       }
     },
-    "[Mariana]": {
-      "enabled": true,
-      "rules": {
-        "variable": "#D8DEE9", //变量名，高亮后不正确了
-        // "function": "#6699cc"
-      }
-    },
-    "[Atom One Dark]": {
-      "enabled": false
-    },
     "[One Monokai]": {
       "enabled": true,
       "rules": {
         "namespace": "#61afef"
       }
-    }
+    },
+    "[MonoNight Pro]": {
+      "enabled": true,
+      "rules": {
+        "variable": "#d6deeb", //变量名 白色:#d6deeb
+      }
+    },
   },
   //重写主题样式 要符合TextMate语法
   //https://code.visualstudio.com/api/language-extensions/syntax-highlight-guide#textmate-grammars
   "editor.tokenColorCustomizations": {
-    //要启用重写样式需要设置："editor.semanticHighlighting.enabled": false
     "[Nord]": {
-      // 重新覆盖注释和逗号颜色
       "comments": "#7b88a1",
       "textMateRules": [
         {
@@ -296,47 +258,54 @@
         }
       ]
     },
-    "[freeCodeCamp Dark Theme]": {
+    "[MonoNight Pro]": {
       "textMateRules": [
         {
-          "name": "Keyword, Storage",
           "scope": [
-            "keyword",
-            "storage.type",
-            "storage.modifier"
+            "keyword.control"
           ],
           "settings": {
-            "foreground": "#dbb8ff"
+            //只改 if、for、return、break 等控制流关键字
+            //不包括 function、class 等声明关键字
+            "foreground": "#f1cb72" //流程控制关键字颜色 红色:#df6587,黄色:f1cb72
           }
-        },
+        }
       ]
     },
   },
   //自定义主题组件颜色
   //https://code.visualstudio.com/api/references/theme-color
   "workbench.colorCustomizations": {
-    "[Jetbrains Fleet]": {
-      "editorLineNumber.activeForeground": "#abb2c0",
-      "editorCursor.foreground": "#EFB080"
-    },
-    "[GitHub Blue]": {
-      "tab.activeBorderTop": "#79C0FF"
-    },
-    "[freeCodeCamp Dark Theme]": {
-      "tab.activeBorder": "#DFDFE2",
-      "terminal.background": "#121225"
-    },
     "[Night Owl]": {
       "editorSuggestWidget.highlightForeground": "#7fdbca"
     },
-    "[Catppuccin Macchiato]": {
-      "editorSuggestWidget.focusHighlightForeground": "#F5A97F",
-      "editorSuggestWidget.highlightForeground": "#F5A97F"
+    "[MonoNight Pro]": {
+      //双击高亮相同文本的背景色
+      "editor.selectionHighlightBackground": "#9494a390", //#292b3a #514729 #514d48 #64667990
+      //滚动条颜色
+      "scrollbarSlider.background": "#3f435b",
+      "scrollbarSlider.hoverBackground": "#6d7085",
+      "scrollbarSlider.activeBackground": "#6d7085"
+    },
+    "[Air dark]": {
+      //智能提示高亮颜色
+      "editorSuggestWidget.highlightForeground": "#7fdbca",
+      "editorSuggestWidget.focusHighlightForeground": "#7fdbca",
+      //双击高亮相同文本的背景色
+      "editor.selectionHighlightBackground": "#9494a390", //同 [MonoNight Pro]
+      //滚动条颜色
+      "scrollbarSlider.background": "#3f435b",
+      "scrollbarSlider.hoverBackground": "#6d7085",
+      "scrollbarSlider.activeBackground": "#6d7085"
     }
   },
   //====================================
   //页面tab标签是否换行，不喜欢换行直接在一行显示所有标签页
   "workbench.editor.wrapTabs": false,
+  //是否显示标签页
+  "workbench.editor.showTabs": "multiple",
+  //是否只打开一个文件 true:双击或编辑状态打开第2个，否则同一个 false:每次都打开新标签
+  "workbench.editor.enablePreview": true,
   //启用本地文件历史记录
   "workbench.localHistory.enabled": true,
   //本地文件历史记录最大数:30。超过后丢弃最早的记录
@@ -349,22 +318,20 @@
   "workbench.tips.enabled": true,
   //启动后显示模式
   "workbench.startupEditor": "welcomePageInEmptyWorkbench",
-  //启用平滑滚动动画
-  "workbench.list.smoothScrolling": true,
+  //侧边栏是否显示或显示哪个部件
+  "workbench.activityBar.location": "default",
   //主边栏和活动栏位置：right 右边(不影响左边代码)，left 左边(终端放右边并列方便查看结果)
   "workbench.sideBar.location": "left",
-  //窗口顶部中间位置显示设置 true：显示命令窗口隐藏菜单 false：显示菜单隐藏命令窗口
-  "window.commandCenter": true,
   //不显示菜单栏
   "window.menuBarVisibility": "compact",
   //是否显示布局组件 切换面板、主侧栏
   "workbench.layoutControl.enabled": false,
   "explorer.decorations.badges": false,
   // JavaScript/TypeScript 自动导入建议，代替 Auto Import 插件
-  "javascript.suggest.autoImports": true,
-  "typescript.suggest.autoImports": true,
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "typescript.updateImportsOnFileMove.enabled": "always",
+  "js/ts.suggest.autoImports": true,
+  "js/ts.updateImportsOnFileMove.enabled": "always",
+  //让函数(名)和后面的大括号之间加个空格
+  "js/ts.format.insertSpaceBeforeFunctionParenthesis": true,
   //关闭 固定打开的编缉器(没什么用)
   //1.79.0版本设置后依然可见，关闭方法：在资源管理器或打开的编辑器边框上右键 隐藏"打开的编辑器"
   "explorer.openEditors.visible": 10,
@@ -390,24 +357,8 @@
   "update.mode": "manual",
   //Live Server预览端口，实时预览网页内容
   "liveServer.settings.port": 5051,
-  //Go LSP Server 配置
-  //更多配置：https://github.com/golang/vscode-go/blob/master/docs/settings.md
-  "gopls": {
-    // Jetbrains Fleet 主题设为 true, Token如 package、import、func等关键字高亮
-    // 以下主题需要设为false，否则关键字类型没有高亮或高亮不正确
-    // freeCodeCamp Dark Theme、Soda、Night Owl、
-    // Slack Theme系列(Slack Theme Dark Mode为true)
-    "ui.semanticTokens": true,
-    // import 导入的包名不显示下划线(默认Both有下划线)
-    "ui.navigation.importShortcut": "Definition",
-    //检测提示隐藏变量(shadow)
-    "ui.diagnostic.analyses": {
-      "shadow": true
-    }
-  },
-  "go.enableCodeLens": {
-    "runtest": true
-  },
+  // 配合 Vue 官方 Volar 插件
+  "vue.inlayHints.missingProps": true,
   "macros": {
     //关闭所有tab页并折叠目录。绑定快捷键：Ctrl + Alt + \
     "closeAllTabs": [
@@ -415,13 +366,13 @@
       "workbench.action.closeAllEditors",
       "workbench.action.terminal.killAll"
     ],
+    //选择括号所有内容(包括括号) 捷键：Ctrl + Shift + '(单引号)
     "appendEndSybol": [
-      "editor.action."
+      "editor.action.selectToBracket"
     ]
   },
   //配置cSpell只检测当前打开的工作区文件，不检测其它文件
   "cSpell.spellCheckOnlyWorkspaceFiles": true,
-  "cSpell.showAutocompleteSuggestions": true,
   "cSpell.userWords": [
     "activeline",
     "calt",
@@ -469,7 +420,8 @@
     "Vitesse",
     "Inconsolata",
     "Roboto",
-    "Prex",
+    "Prex"
   ],
   "window.titleBarStyle": "custom",
+  "cSpell.enabled": true
 }
